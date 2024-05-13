@@ -34,7 +34,8 @@
 		"test": "cross-env NODE_OPTIONS=--experimental-vm-modules npx jest",
 		"build": "npx build --package=@zenfs/core --globalName ZenFS_Zip --entry src/index.ts",
 		"build:docs": "typedoc --out docs --name 'ZenFS Zip' src/index.ts",
-		"prepublishOnly": "npm run build"
+		"prepublishOnly": "npm run build",
+		"prepare": "npm run build"
 	},
 	"devDependencies": {
 		"@fal-works/esbuild-plugin-global-externals": "^2.1.2",
