@@ -110,7 +110,7 @@ export class ZipFS extends Readonly(Sync(FileSystem)) {
 		const cdEnd = ptr + this.eocd.size;
 
 		while (ptr < cdEnd) {
-			const cd = new FileEntry(this.data, this.data.slice(ptr, sizeof_FileEntry));
+			const cd = new FileEntry(this.data, this.data.slice(ptr));
 			/* 	Paths must be absolute,
 			yet zip file paths are always relative to the zip root.
 			So we prepend '/' and call it a day. */
